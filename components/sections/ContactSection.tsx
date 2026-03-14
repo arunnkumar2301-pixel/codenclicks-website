@@ -133,11 +133,11 @@ export default function ContactSection() {
                     Address
                   </p>
                   <address className="font-inter text-[#111111]/55 text-sm not-italic leading-relaxed">
-                    Your Office Address,
+                    17, Extension 3,
                     <br />
-                    City, State,
+                    Nangloi, Delhi-110041 ,
                     <br />
-                    Country
+                    India
                   </address>
                 </div>
               </div>

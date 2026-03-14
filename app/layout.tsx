@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import WhatsAppFloat from "@/components/ui/WhatsAppFloat";
 
 export const metadata: Metadata = {
   title: {
@@ -36,7 +37,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <WhatsAppFloat />
+      </body>
     </html>
   );
 }
