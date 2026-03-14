@@ -37,7 +37,7 @@ export default function HeroSection() {
 
           {/* Instant poster */}
           <img
-            src="/hero-poster.jpg"
+            src="https://res.cloudinary.com/dx8xkca5i/image/upload/v1773490174/hero-poster_hvn9ie.jpg"
             alt="Background"
             className="absolute inset-0 w-full h-full object-cover"
             loading="eager"
@@ -45,18 +45,21 @@ export default function HeroSection() {
 
           {/* Video loads after page idle */}
           {showVideo && (
-            <video
-              ref={videoRef}
-              className="absolute inset-0 w-full h-full object-cover"
-              muted
-              loop
-              playsInline
-              autoPlay
-              preload="none"
-              style={{ pointerEvents: "none" }}
-            >
-              <source src="/hero-video.mp4" type="video/mp4" />
-            </video>
+  <video
+    ref={videoRef}
+    className="absolute inset-0 w-full h-full object-cover"
+    muted
+    loop
+    playsInline
+    autoPlay
+    preload="none"
+    style={{ pointerEvents: "none" }}
+  >
+    <source
+      src="https://res.cloudinary.com/dx8xkca5i/video/upload/f_auto,q_auto/v1773490187/hero-video_yuhlkh.mp4"
+      type="video/mp4"
+    />
+  </video>
           )}
 
           {/* grid overlay */}
