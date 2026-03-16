@@ -6,13 +6,14 @@ export default function HeroSection() {
     <section className="relative flex min-h-[100svh] w-full items-center overflow-hidden bg-[#111111]">
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto/v1773490174/hero-poster_hvn9ie.jpg"
-          alt="Code N Clicks hero background"
-          fill
-          priority
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
-          className="object-cover"
-        />
+  src="https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto,c_fill,w_1200/v1773490174/hero-poster_hvn9ie.jpg"
+  alt="Code N Clicks hero background"
+  fill
+  priority
+  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
+  quality={80}
+  className="object-cover"
+/>
 
         <div className="absolute inset-0 bg-black/60" />
 

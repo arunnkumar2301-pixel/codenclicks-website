@@ -50,6 +50,13 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${inter.variable} ${sora.variable}`}>
+      <head>
+        <link
+          rel="preconnect"
+          href="https://res.cloudinary.com"
+          crossOrigin=""
+        />
+      </head>
       <body className="antialiased bg-[#111111] text-white">
         {children}
         <WhatsAppFloat />
