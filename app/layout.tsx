@@ -37,7 +37,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className="antialiased bg-[#111111] text-white">
         {children}
         <WhatsAppFloat />
       </body>
