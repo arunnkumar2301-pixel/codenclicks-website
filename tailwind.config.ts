@@ -16,8 +16,8 @@ const config: Config = {
         "mid-grey": "#E8E8E4",
       },
       fontFamily: {
-        sora: ["Sora", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
+        sora: ["var(--font-sora)", "sans-serif"],
+        inter: ["var(--font-inter)", "sans-serif"],
       },
       animation: {
         marquee: "marquee 32s linear infinite",
