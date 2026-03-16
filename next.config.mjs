@@ -1,27 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   compress: true,
-  poweredByHeader: false,
   images: {
-    formats: ["image/avif", "image/webp"],
-  },
-
-  async headers() {
-    return [
+    remotePatterns: [
       {
-        source: "/(.*)",
-        headers: [
-          {
-            key: "X-DNS-Prefetch-Control",
-            value: "on",
-          },
-          {
-            key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-        ],
+        protocol: "https",
+        hostname: "res.cloudinary.com",
       },
-    ];
+    ],
+    formats: ["image/avif", "image/webp"],
   },
 };
 

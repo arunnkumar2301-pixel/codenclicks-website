@@ -8,7 +8,7 @@ export default function FAQHero() {
     <section className="relative overflow-hidden bg-[#111111] pt-40 pb-28 lg:pb-36">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/faq-hero.png"
+          src="https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto/v1773490176/faq-hero_mqznfy.png"
           alt="FAQ banner"
           fill
           sizes="100vw"

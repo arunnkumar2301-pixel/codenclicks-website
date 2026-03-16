@@ -72,9 +72,12 @@ export default function ServicesHero() {
                 muted
                 loop
                 playsInline
-                preload="auto"
+                preload="none"
               >
-                <source src="/CNC-Services-Video.mp4" type="video/mp4" />
+                <source
+                  src="https://res.cloudinary.com/dx8xkca5i/video/upload/f_auto,q_auto/v1773490181/CNC-Services-Video_o35zxj.mp4"
+                  type="video/mp4"
+                />
               </video>
 
               <div className="absolute inset-0 bg-black/28" />

@@ -8,7 +8,7 @@ export default function BlogHero() {
     <section className="relative overflow-hidden bg-[#111111] pt-40 pb-28 lg:pb-36">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/blog-hero.png"
+          src="https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto/v1773637400/Blogss_evdnjk.png"
           alt="Code N Clicks blog banner"
           fill
           sizes="100vw"

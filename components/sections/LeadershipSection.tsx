@@ -8,7 +8,8 @@ const LEADERS = [
   {
     name: "Arun Kumar",
     role: "Founder",
-    image: "/founder-arunk.jpeg",
+    image:
+      "https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto/v1773490173/founder-arunk_ppdudk.jpg",
     bio: "Arun Kumar is the Founder of Code N Clicks, guiding the company with a clear vision to help businesses grow through refined digital experiences and performance-led solutions. With a strong foundation in web development and growth-focused strategy, he believes the best digital work happens where creativity, technology, and measurable business outcomes meet.",
     extra:
       "At Code N Clicks, Arun leads innovation across projects, ensuring that every website, campaign, and digital solution is designed with both brand value and long-term client growth in mind.",
@@ -16,7 +17,8 @@ const LEADERS = [
   {
     name: "Jayant Mittal",
     role: "Co-Founder",
-    image: "/cofounder-jayant.jpeg",
+    image:
+      "https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto/v1773490173/cofounder-jayant_drl8sb.jpg",
     bio: "Jayant Mittal is the Co-Founder of Code N Clicks and plays a key role in shaping the company’s direction, partnerships, and growth. He focuses on building strong client relationships and creating scalable digital solutions that align with modern business needs.",
     extra:
       "His approach combines strategic thinking with practical execution, helping brands strengthen their digital presence through clarity, consistency, and solutions built for long-term impact.",

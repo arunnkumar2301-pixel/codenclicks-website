@@ -49,13 +49,13 @@ export default function IntegratedSolutionsSection() {
           >
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-xl shadow-black/10 bg-[#d9d9d9]">
               <Image
-                src="/integrated-solutions.png"
-                alt="Integrated digital solutions"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-                priority={false}
-              />
+  src="https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto/v1773490176/integrated-solutions_eqmuhb.png"
+  alt="Integrated solutions"
+  fill
+  sizes="(min-width: 1024px) 50vw, 100vw"
+  className="object-cover"
+  priority={false}
+/>
 
               <div className="absolute inset-0 bg-black/20" />
 

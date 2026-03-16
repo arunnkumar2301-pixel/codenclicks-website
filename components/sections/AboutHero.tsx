@@ -8,7 +8,7 @@ export default function AboutHero() {
     <section className="bg-[#111111] pt-40 pb-28 lg:pb-36 relative overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/about-us.png"
+          src="https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto/v1773637400/AboutUS_twn0kq.png"
           alt="About Code N Clicks"
           fill
           sizes="100vw"

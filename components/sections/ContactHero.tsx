@@ -8,7 +8,7 @@ export default function ContactHero() {
     <section className="relative overflow-hidden bg-[#111111] pt-40 pb-28 lg:pb-36">
       <div className="absolute inset-0 z-0">
         <Image
-          src="/contactus-hero.png"
+          src="https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto/v1773637400/Contact_Us_q6txrz.png"
           alt="Contact banner"
           fill
           sizes="100vw"
@@ -43,8 +43,8 @@ export default function ContactHero() {
         >
           <div className="w-8 h-px bg-[#C6A969]" />
           <span className="font-inter text-[#C6A969] text-xs tracking-[0.25em] uppercase">
-  Let&apos;s Talk
-</span>
+            Let&apos;s Talk
+          </span>
         </motion.div>
 
         <motion.h1

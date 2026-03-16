@@ -21,13 +21,13 @@ export default function StrategySection() {
           >
             <div className="relative rounded-3xl overflow-hidden aspect-[4/3] shadow-xl shadow-black/10 bg-[#d9d9d9]">
               <Image
-                src="/strategy-image.png"
-                alt="Strategy and creative planning"
-                fill
-                sizes="(min-width: 1024px) 50vw, 100vw"
-                className="object-cover"
-                priority={false}
-              />
+  src="https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto/v1773490174/strategy-image_z7emh4.png"
+  alt="Strategy and creative planning"
+  fill
+  sizes="(min-width: 1024px) 50vw, 100vw"
+  className="object-cover"
+  priority={false}
+/>
 
               <div className="absolute inset-0 bg-black/20" />
 
