@@ -61,7 +61,7 @@ export default function Navbar() {
         >
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
             <Image
-              src="/logo-whitee.png"
+              src="/logo-whitee.svg"
               alt="Code N Clicks logo"
               width={44}
               height={44}

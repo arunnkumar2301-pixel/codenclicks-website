@@ -1,70 +1,71 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+
+const TAGS = ["Branding", "SEO", "Web", "Ads"];
 
 export default function CTABand() {
-  const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
-    <section ref={ref} className="bg-[#F5F5F2] py-16 lg:py-20 px-6 lg:px-12">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
+    <section className="bg-[#F5F5F2] px-6 py-16 lg:px-12 lg:py-20">
+      <div className="mx-auto max-w-7xl">
+        <div
           className="relative overflow-hidden rounded-3xl"
-          style={{ background: "linear-gradient(135deg, #EDE7DB 0%, #F5F5F2 55%, #E8E2D6 100%)" }}
+          style={{
+            background:
+              "linear-gradient(135deg, #EDE7DB 0%, #F5F5F2 55%, #E8E2D6 100%)",
+          }}
         >
           <div className="grid grid-cols-1 lg:grid-cols-2">
-            <div className="p-10 sm:p-14 lg:p-16 flex flex-col justify-center">
-              <div className="w-10 h-0.5 bg-[#C6A969] mb-8" />
-              <h2 className="font-sora font-bold text-[#111111] text-4xl lg:text-5xl leading-tight tracking-tight mb-9">
+            <div className="flex flex-col justify-center p-10 sm:p-14 lg:p-16">
+              <div className="mb-8 h-0.5 w-10 bg-[#C6A969]" />
+
+              <h2 className="mb-9 font-sora text-4xl font-bold leading-tight tracking-tight text-[#111111] lg:text-5xl">
                 {"Let's build something"}
                 <br />
                 remarkable together.
               </h2>
+
               <div>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-[#111111] text-white px-8 py-4 rounded-xl font-sora font-semibold text-sm hover:bg-[#1f1f1f] transition-colors duration-200"
+                  className="inline-flex items-center gap-2 rounded-xl bg-[#111111] px-8 py-4 font-sora text-sm font-semibold text-white transition-colors duration-200 hover:bg-[#1f1f1f]"
                 >
                   Start a Project &#8594;
                 </Link>
               </div>
             </div>
 
-            <div className="hidden lg:flex items-center justify-center p-12 lg:p-14">
+            <div className="hidden items-center justify-center p-12 lg:flex lg:p-14">
               <div
-                className="w-full h-72 rounded-2xl flex flex-col items-center justify-center gap-6 px-10"
-                style={{ background: "linear-gradient(145deg, #181610 0%, #211e15 100%)" }}
+                className="flex h-72 w-full flex-col items-center justify-center gap-6 rounded-2xl px-10"
+                style={{
+                  background:
+                    "linear-gradient(145deg, #181610 0%, #211e15 100%)",
+                }}
               >
                 <div className="flex items-center gap-4">
                   <Image
-                    src="/logo-whitee.png"
+                    src="/logo-whitee.svg"
                     alt="Code N Clicks logo"
                     width={44}
                     height={44}
                     className="h-11 w-auto object-contain"
                     priority={false}
                   />
-                  <span className="font-sora font-bold text-white text-[1.75rem] tracking-tight">
+                  <span className="font-sora text-[1.75rem] font-bold tracking-tight text-white">
                     Code N Clicks
                   </span>
                 </div>
 
-                <p className="font-inter text-white/75 text-base font-medium text-center leading-relaxed max-w-[280px]">
-                  Premium digital experiences crafted for brands that mean business.
+                <p className="max-w-[280px] text-center font-inter text-base font-medium leading-relaxed text-white/75">
+                  Premium digital experiences crafted for brands that mean
+                  business.
                 </p>
 
-                <div className="flex flex-wrap gap-3 justify-center">
-                  {["Branding", "SEO", "Web", "Ads"].map((tag) => (
+                <div className="flex flex-wrap justify-center gap-3">
+                  {TAGS.map((tag) => (
                     <span
                       key={tag}
-                      className="font-inter text-white/80 text-sm font-medium px-3.5 py-1.5 rounded-lg border border-white/20"
+                      className="rounded-lg border border-white/20 px-3.5 py-1.5 font-inter text-sm font-medium text-white/80"
                     >
                       {tag}
                     </span>
@@ -74,9 +75,9 @@ export default function CTABand() {
             </div>
           </div>
 
-          <div className="absolute top-6 right-6 w-28 h-28 rounded-full border border-[#C6A969]/12 pointer-events-none" />
-          <div className="absolute top-14 right-14 w-10 h-10 rounded-full border border-[#C6A969]/18 pointer-events-none" />
-        </motion.div>
+          <div className="pointer-events-none absolute top-6 right-6 h-28 w-28 rounded-full border border-[#C6A969]/12" />
+          <div className="pointer-events-none absolute top-14 right-14 h-10 w-10 rounded-full border border-[#C6A969]/18" />
+        </div>
       </div>
     </section>
   );

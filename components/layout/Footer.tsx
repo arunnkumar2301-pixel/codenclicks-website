@@ -32,42 +32,44 @@ export default function Footer() {
   return (
     <footer className="bg-[#111111] text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-20 pb-14">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           <div>
-            <Link href="/" className="inline-flex items-center gap-3 mb-6 group">
+            <Link href="/" className="group mb-6 inline-flex items-center gap-3">
               <Image
-                src="/logo-whitee.png"
+                src="/logo-whitee.svg"
                 alt="Code N Clicks logo"
                 width={44}
                 height={44}
                 className="h-10 w-auto object-contain"
                 priority={false}
               />
-              <span className="font-sora font-bold text-white text-xl tracking-tight group-hover:text-[#C6A969] transition-colors duration-300">
+              <span className="font-sora text-xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[#C6A969]">
                 Code N Clicks
               </span>
             </Link>
 
-            <p className="font-inter text-white/40 text-sm leading-relaxed mb-8 max-w-[220px]">
+            <p className="mb-8 max-w-[220px] font-inter text-sm leading-relaxed text-white/40">
               Stay connected for digital insights, ideas, and updates.
             </p>
 
             {subscribed ? (
-              <p className="font-inter text-[#C6A969] text-sm mb-8">Thanks for subscribing ✦</p>
+              <p className="mb-8 font-inter text-sm text-[#C6A969]">
+                Thanks for subscribing ✦
+              </p>
             ) : (
-              <form onSubmit={handleSubscribe} className="flex gap-2 mb-8">
+              <form onSubmit={handleSubscribe} className="mb-8 flex gap-2">
                 <input
                   type="email"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your email address"
-                  className="flex-1 min-w-0 bg-white/5 border border-white/10 text-white text-xs px-4 py-3 rounded-xl placeholder:text-white/25 focus:outline-none focus:border-[#C6A969]/50 transition-colors font-inter"
+                  className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 px-4 py-3 font-inter text-xs text-white placeholder:text-white/25 transition-colors focus:border-[#C6A969]/50 focus:outline-none"
                 />
                 <button
                   type="submit"
                   aria-label="Subscribe"
-                  className="bg-[#C6A969] text-[#111111] px-4 py-3 rounded-xl text-sm font-sora font-bold hover:bg-[#D4BC87] transition-colors flex-shrink-0"
+                  className="flex-shrink-0 rounded-xl bg-[#C6A969] px-4 py-3 font-sora text-sm font-bold text-[#111111] transition-colors hover:bg-[#D4BC87]"
                 >
                   →
                 </button>
@@ -80,7 +82,7 @@ export default function Footer() {
                 aria-label="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-white/35 hover:text-[#C6A969] hover:border-[#C6A969]/30 transition-all duration-200"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 text-white/35 transition-all duration-200 hover:border-[#C6A969]/30 hover:text-[#C6A969]"
               >
                 <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                   <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" strokeWidth="1.5" />
@@ -94,7 +96,7 @@ export default function Footer() {
                 aria-label="LinkedIn"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-white/35 hover:text-[#C6A969] hover:border-[#C6A969]/30 transition-all duration-200"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 text-white/35 transition-all duration-200 hover:border-[#C6A969]/30 hover:text-[#C6A969]"
               >
                 <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -108,7 +110,7 @@ export default function Footer() {
                 aria-label="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-white/35 hover:text-[#C6A969] hover:border-[#C6A969]/30 transition-all duration-200"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 text-white/35 transition-all duration-200 hover:border-[#C6A969]/30 hover:text-[#C6A969]"
               >
                 <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -120,7 +122,7 @@ export default function Footer() {
                 aria-label="YouTube"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl border border-white/10 flex items-center justify-center text-white/35 hover:text-[#C6A969] hover:border-[#C6A969]/30 transition-all duration-200"
+                className="flex h-9 w-9 items-center justify-center rounded-xl border border-white/10 text-white/35 transition-all duration-200 hover:border-[#C6A969]/30 hover:text-[#C6A969]"
               >
                 <svg width="16" height="16" fill="none" viewBox="0 0 24 24" aria-hidden="true">
                   <path
@@ -136,13 +138,16 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-sora font-semibold text-white/90 text-xs tracking-[0.18em] uppercase mb-6">
+            <h4 className="mb-6 font-sora text-xs font-semibold uppercase tracking-[0.18em] text-white/90">
               Services
             </h4>
             <ul className="space-y-3.5">
               {SERVICE_LINKS.map((label) => (
                 <li key={label}>
-                  <Link href="/services" className="font-inter text-white/40 text-sm hover:text-[#C6A969] transition-colors duration-200">
+                  <Link
+                    href="/services"
+                    className="font-inter text-sm text-white/40 transition-colors duration-200 hover:text-[#C6A969]"
+                  >
                     {label}
                   </Link>
                 </li>
@@ -151,13 +156,16 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-sora font-semibold text-white/90 text-xs tracking-[0.18em] uppercase mb-6">
+            <h4 className="mb-6 font-sora text-xs font-semibold uppercase tracking-[0.18em] text-white/90">
               Company
             </h4>
             <ul className="space-y-3.5">
               {COMPANY_LINKS.map(({ label, href }) => (
                 <li key={label}>
-                  <Link href={href} className="font-inter text-white/40 text-sm hover:text-[#C6A969] transition-colors duration-200">
+                  <Link
+                    href={href}
+                    className="font-inter text-sm text-white/40 transition-colors duration-200 hover:text-[#C6A969]"
+                  >
                     {label}
                   </Link>
                 </li>
@@ -166,17 +174,20 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="font-sora font-semibold text-white/90 text-xs tracking-[0.18em] uppercase mb-6">
+            <h4 className="mb-6 font-sora text-xs font-semibold uppercase tracking-[0.18em] text-white/90">
               Contact
             </h4>
             <ul className="space-y-4">
               <li>
-                <a href="mailto:hello@codenclicks.in" className="font-inter text-white/40 text-sm hover:text-[#C6A969] transition-colors duration-200 break-all">
+                <a
+                  href="mailto:hello@codenclicks.in"
+                  className="break-all font-inter text-sm text-white/40 transition-colors duration-200 hover:text-[#C6A969]"
+                >
                   hello@codenclicks.in
                 </a>
               </li>
               <li>
-                <address className="font-inter text-white/40 text-sm not-italic leading-relaxed">
+                <address className="font-inter text-sm not-italic leading-relaxed text-white/40">
                   17, Extension-3, Nangloi,
                   <br />
                   Delhi - 110041,
@@ -185,7 +196,10 @@ export default function Footer() {
                 </address>
               </li>
               <li>
-                <a href="tel:+918527855155" className="font-inter text-white/40 text-sm hover:text-[#C6A969] transition-colors duration-200">
+                <a
+                  href="tel:+918527855155"
+                  className="font-inter text-sm text-white/40 transition-colors duration-200 hover:text-[#C6A969]"
+                >
                   +91 85278 55155
                 </a>
               </li>
@@ -195,15 +209,15 @@ export default function Footer() {
 
         <div className="mt-16 h-px bg-white/10" />
 
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="font-inter text-white/25 text-xs">
+        <div className="mt-8 flex flex-col items-center justify-between gap-4 sm:flex-row">
+          <p className="font-inter text-xs text-white/25">
             &copy; {new Date().getFullYear()} Code N Clicks. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <a href="#" className="font-inter text-white/25 text-xs hover:text-white/50 transition-colors">
+            <a href="#" className="font-inter text-xs text-white/25 transition-colors hover:text-white/50">
               Privacy Policy
             </a>
-            <a href="#" className="font-inter text-white/25 text-xs hover:text-white/50 transition-colors">
+            <a href="#" className="font-inter text-xs text-white/25 transition-colors hover:text-white/50">
               Terms of Service
             </a>
           </div>
