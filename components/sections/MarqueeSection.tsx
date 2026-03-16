@@ -1,16 +1,31 @@
-"use client";
-
-const ITEMS = ["Branding", "Web Design", "SEO", "Paid Ads", "Social Media", "Strategy", "Local Growth", "Influencer Marketing"];
+const ITEMS = [
+  "Branding",
+  "Web Design",
+  "SEO",
+  "Paid Ads",
+  "Social Media",
+  "Strategy",
+  "Local Growth",
+  "Influencer Marketing",
+];
 
 function Strip() {
   return (
     <>
-      {ITEMS.map((item, i) => (
-        <span key={i} className="inline-flex items-center whitespace-nowrap">
-          <span className="font-sora font-bold text-[#111111] tracking-tight" style={{ fontSize: "clamp(1.8rem, 3.8vw, 2.9rem)" }}>
+      {ITEMS.map((item) => (
+        <span key={item} className="inline-flex items-center whitespace-nowrap">
+          <span
+            className="font-sora font-bold tracking-tight text-[#111111]"
+            style={{ fontSize: "clamp(1.4rem, 3.2vw, 2.4rem)" }}
+          >
             {item}
           </span>
-          <span className="text-[#C6A969] mx-7 text-base select-none" aria-hidden="true">&#10022;</span>
+          <span
+            className="mx-5 select-none text-sm text-[#C6A969] sm:mx-7 sm:text-base"
+            aria-hidden="true"
+          >
+            &#10022;
+          </span>
         </span>
       ))}
     </>
@@ -19,10 +34,23 @@ function Strip() {
 
 export default function MarqueeSection() {
   return (
-    <section className="bg-white border-y border-[#111111]/6 py-7 overflow-hidden" aria-label="Services marquee">
-      <div className="flex items-center w-max animate-marquee">
+    <section
+      className="overflow-hidden border-y border-[#111111]/6 bg-white py-5 sm:py-7"
+      aria-label="Services marquee"
+    >
+      <div className="hidden w-max items-center md:flex animate-marquee motion-reduce:animate-none">
         <Strip />
         <Strip />
+      </div>
+
+      <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 px-4 md:hidden">
+        {ITEMS.map((item) => (
+          <span key={item} className="inline-flex items-center whitespace-nowrap">
+            <span className="font-sora text-lg font-bold tracking-tight text-[#111111]">
+              {item}
+            </span>
+          </span>
+        ))}
       </div>
     </section>
   );
