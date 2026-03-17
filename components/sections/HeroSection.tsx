@@ -16,9 +16,9 @@ export default function HeroSection() {
           className="object-cover"
         />
 
-        {/* Desktop-only background video */}
+        {/* Desktop background video */}
         <video
-          className="absolute inset-0 hidden h-full w-full object-cover lg:block"
+          className="absolute inset-0 hidden h-full w-full object-cover md:block"
           autoPlay
           muted
           loop
@@ -28,7 +28,7 @@ export default function HeroSection() {
           style={{ pointerEvents: "none" }}
         >
           <source
-            src="https://res.cloudinary.com/dx8xkca5i/video/upload/q_auto:good,f_auto/v1773490187/hero-video_yuhlkh.mp4"
+            src="https://res.cloudinary.com/dx8xkca5i/video/upload/q_auto:good,f_auto,vc_auto/v1773490187/hero-video_yuhlkh.mp4"
             type="video/mp4"
           />
         </video>
@@ -62,7 +62,7 @@ export default function HeroSection() {
           </div>
 
           <h1
-            className="mb-8 font-sora text-white font-bold leading-[1.04] tracking-tight"
+            className="mb-8 font-sora font-bold leading-[1.04] tracking-tight text-white"
             style={{ fontSize: "clamp(2.1rem, 6vw, 4.75rem)" }}
           >
             We build digital
