@@ -25,7 +25,7 @@ export default function Footer() {
           <div>
             <Link href="/" className="group mb-6 inline-flex items-center gap-3">
               <Image
-                src="/logo-whitee.svg"
+                src="/logo-white.svg"
                 alt="Code N Clicks logo"
                 width={44}
                 height={44}
