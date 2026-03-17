@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 
 const SERVICE_LINKS = [
   "Branding & Creative Design",
@@ -21,17 +18,9 @@ const COMPANY_LINKS = [
 ];
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [subscribed, setSubscribed] = useState(false);
-
-  const handleSubscribe = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (email.trim()) setSubscribed(true);
-  };
-
   return (
     <footer className="bg-[#111111] text-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 pt-20 pb-14">
+      <div className="mx-auto max-w-7xl px-6 pt-20 pb-14 lg:px-12">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8">
           <div>
             <Link href="/" className="group mb-6 inline-flex items-center gap-3">
@@ -41,7 +30,6 @@ export default function Footer() {
                 width={44}
                 height={44}
                 className="h-10 w-auto object-contain"
-                priority={false}
               />
               <span className="font-sora text-xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[#C6A969]">
                 Code N Clicks
@@ -52,29 +40,20 @@ export default function Footer() {
               Stay connected for digital insights, ideas, and updates.
             </p>
 
-            {subscribed ? (
-              <p className="mb-8 font-inter text-sm text-[#C6A969]">
-                Thanks for subscribing ✦
-              </p>
-            ) : (
-              <form onSubmit={handleSubscribe} className="mb-8 flex gap-2">
-                <input
-                  type="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Your email address"
-                  className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 px-4 py-3 font-inter text-xs text-white placeholder:text-white/25 transition-colors focus:border-[#C6A969]/50 focus:outline-none"
-                />
-                <button
-                  type="submit"
-                  aria-label="Subscribe"
-                  className="flex-shrink-0 rounded-xl bg-[#C6A969] px-4 py-3 font-sora text-sm font-bold text-[#111111] transition-colors hover:bg-[#D4BC87]"
-                >
-                  →
-                </button>
-              </form>
-            )}
+            <form className="mb-8 flex gap-2">
+              <input
+                type="email"
+                placeholder="Your email address"
+                className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 px-4 py-3 font-inter text-xs text-white placeholder:text-white/25 transition-colors focus:border-[#C6A969]/50 focus:outline-none"
+              />
+              <button
+                type="button"
+                aria-label="Subscribe"
+                className="flex-shrink-0 rounded-xl bg-[#C6A969] px-4 py-3 font-sora text-sm font-bold text-[#111111] transition-colors hover:bg-[#D4BC87]"
+              >
+                →
+              </button>
+            </form>
 
             <div className="flex gap-2.5">
               <a

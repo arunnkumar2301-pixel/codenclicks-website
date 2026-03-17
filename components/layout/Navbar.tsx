@@ -58,8 +58,9 @@ export default function Navbar() {
               ? "bg-[#111111]/90 border-white/10 backdrop-blur-xl shadow-xl shadow-black/30"
               : "bg-[#111111]/70 border-white/10 backdrop-blur-md"
           }`}
+          aria-label="Main navigation"
         >
-          <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
+          <Link href="/" className="group flex flex-shrink-0 items-center gap-3">
             <Image
               src="/logo-whitee.svg"
               alt="Code N Clicks logo"
@@ -68,7 +69,7 @@ export default function Navbar() {
               className="h-10 w-auto object-contain"
               priority
             />
-            <span className="font-sora font-bold text-white text-lg sm:text-xl tracking-tight group-hover:text-[#C6A969] transition-colors duration-300">
+            <span className="font-sora text-lg font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[#C6A969] sm:text-xl">
               Code N Clicks
             </span>
           </Link>
@@ -80,6 +81,7 @@ export default function Navbar() {
                 <Link
                   key={href}
                   href={href}
+                  aria-current={active ? "page" : undefined}
                   className={`px-4 py-2 rounded-xl text-[13px] font-inter transition-all duration-200 ${
                     active
                       ? "text-[#C6A969] bg-white/5"
@@ -95,17 +97,19 @@ export default function Navbar() {
           <div className="hidden lg:block flex-shrink-0">
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 bg-[#C6A969] text-[#111111] px-5 py-2.5 rounded-xl text-[13px] font-sora font-semibold hover:bg-[#D4BC87] transition-colors duration-200"
+              className="inline-flex items-center gap-1.5 rounded-xl bg-[#C6A969] px-5 py-2.5 text-[13px] font-sora font-semibold text-[#111111] transition-colors duration-200 hover:bg-[#D4BC87]"
             >
               Start a Project
             </Link>
           </div>
 
           <button
+            type="button"
             onClick={() => setMenuOpen((prev) => !prev)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
-            className="lg:hidden flex flex-col justify-center gap-[5px] w-8 h-8"
+            aria-controls="mobile-menu"
+            className="lg:hidden flex h-8 w-8 flex-col justify-center gap-[5px]"
           >
             <span
               className={`block h-px bg-white origin-center transition-all duration-300 ${
@@ -127,19 +131,21 @@ export default function Navbar() {
       </header>
 
       <div
-        className={`fixed top-[88px] left-4 right-4 z-40 border border-white/10 rounded-2xl bg-[#111111]/95 backdrop-blur-xl shadow-2xl p-6 transition-all duration-200 lg:hidden ${
+        id="mobile-menu"
+        className={`fixed top-[88px] left-4 right-4 z-40 rounded-2xl border border-white/10 bg-[#111111]/95 p-6 shadow-2xl backdrop-blur-xl transition-all duration-200 lg:hidden ${
           menuOpen
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-2 pointer-events-none"
+            ? "pointer-events-auto translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-2 opacity-0"
         }`}
       >
-        <nav className="flex flex-col gap-1 mb-6">
+        <nav className="mb-6 flex flex-col gap-1" aria-label="Mobile navigation">
           {NAV_LINKS.map(({ label, href }) => {
             const active = pathname === href;
             return (
               <Link
                 key={href}
                 href={href}
+                aria-current={active ? "page" : undefined}
                 className={`px-4 py-3 rounded-xl text-sm font-inter transition-all duration-200 ${
                   active
                     ? "text-[#C6A969] bg-white/5"
@@ -154,7 +160,7 @@ export default function Navbar() {
 
         <Link
           href="/contact"
-          className="flex items-center justify-center bg-[#C6A969] text-[#111111] px-5 py-3.5 rounded-xl text-sm font-sora font-semibold hover:bg-[#D4BC87] transition-colors duration-200"
+          className="flex items-center justify-center rounded-xl bg-[#C6A969] px-5 py-3.5 text-sm font-sora font-semibold text-[#111111] transition-colors duration-200 hover:bg-[#D4BC87]"
         >
           Start a Project
         </Link>

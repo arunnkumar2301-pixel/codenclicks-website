@@ -6,19 +6,19 @@ export default function HeroSection() {
     <section className="relative flex min-h-[100svh] w-full items-center overflow-hidden bg-[#111111]">
       <div className="absolute inset-0 z-0">
         <Image
-  src="https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto,c_fill,w_1200/v1773490174/hero-poster_hvn9ie.jpg"
-  alt="Code N Clicks hero background"
-  fill
-  priority
-  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
-  quality={80}
-  className="object-cover"
-/>
+          src="https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto,c_fill,w_1200/v1773490174/hero-poster_hvn9ie.jpg"
+          alt="Code N Clicks hero background"
+          fill
+          priority
+          sizes="100vw"
+          unoptimized
+          className="object-cover"
+        />
 
         <div className="absolute inset-0 bg-black/60" />
 
         <div
-          className="absolute inset-0 opacity-[0.015] pointer-events-none"
+          className="pointer-events-none absolute inset-0 opacity-[0.015]"
           style={{
             backgroundImage:
               "linear-gradient(rgba(255,255,255,0.45) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.45) 1px, transparent 1px)",
@@ -27,10 +27,9 @@ export default function HeroSection() {
         />
 
         <div
-          className="hidden md:block absolute bottom-0 left-1/2 -translate-x-1/2 w-[70vw] h-[30vh] opacity-[0.05] blur-[80px] pointer-events-none"
+          className="pointer-events-none absolute bottom-0 left-1/2 hidden h-[30vh] w-[70vw] -translate-x-1/2 opacity-[0.05] blur-[80px] md:block"
           style={{
-            background:
-              "radial-gradient(ellipse, #C6A969 0%, transparent 70%)",
+            background: "radial-gradient(ellipse, #C6A969 0%, transparent 70%)",
           }}
         />
       </div>
@@ -45,7 +44,7 @@ export default function HeroSection() {
           </div>
 
           <h1
-            className="mb-8 font-sora font-bold leading-[1.04] tracking-tight text-white"
+            className="mb-8 font-sora text-white font-bold leading-[1.04] tracking-tight"
             style={{ fontSize: "clamp(2.1rem, 6vw, 4.75rem)" }}
           >
             We build digital
