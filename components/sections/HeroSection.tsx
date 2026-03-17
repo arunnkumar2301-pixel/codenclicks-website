@@ -5,6 +5,7 @@ export default function HeroSection() {
   return (
     <section className="relative flex min-h-[100svh] w-full items-center overflow-hidden bg-[#111111]">
       <div className="absolute inset-0 z-0">
+        {/* Fallback / poster image */}
         <Image
           src="https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto,c_fill,w_1200/v1773490174/hero-poster_hvn9ie.jpg"
           alt="Code N Clicks hero background"
@@ -14,6 +15,23 @@ export default function HeroSection() {
           unoptimized
           className="object-cover"
         />
+
+        {/* Desktop-only background video */}
+        <video
+          className="absolute inset-0 hidden h-full w-full object-cover lg:block"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          poster="https://res.cloudinary.com/dx8xkca5i/image/upload/f_auto,q_auto,c_fill,w_1200/v1773490174/hero-poster_hvn9ie.jpg"
+          style={{ pointerEvents: "none" }}
+        >
+          <source
+            src="https://res.cloudinary.com/dx8xkca5i/video/upload/q_auto:good,f_auto/v1773490187/hero-video_yuhlkh.mp4"
+            type="video/mp4"
+          />
+        </video>
 
         <div className="absolute inset-0 bg-black/60" />
 
