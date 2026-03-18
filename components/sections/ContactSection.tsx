@@ -113,10 +113,10 @@ export default function ContactSection() {
                     Email
                   </p>
                   <a
-                    href="mailto:arun@codenclicks.in"
+                    href="mailto:Hello@codenclicks.in"
                     className="font-inter text-[#111111]/55 text-sm hover:text-[#C6A969] transition-colors duration-200"
                   >
-                    arun@codenclicks.in
+                    Hello@codenclicks.in
                   </a>
                 </div>
               </div>
